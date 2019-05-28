@@ -1,4 +1,4 @@
-#3.run
+#include 3.run
 reset;
 model 'C:\Users\Downloads\3.mod';
 
