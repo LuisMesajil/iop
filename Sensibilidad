@@ -1,0 +1,28 @@
+reset;
+option cplex model;
+option cplex_options ‘sensitivity’;#Variación coeficientes FO
+
+model lab2.mod;
+data lab2.dat;
+
+solve;
+display Prod_ij;
+display IF_ij;
+
+
+suffix down OUT;suffix current OUT;suffix up OUT;
+
+#display p.down, p.current, p.up;
+#display IF_ij.down, IF_ij.current, IF_ij.up;
+
+
+
+#display Prod_ij.rc;
+#display IF_ij.rc;
+
+display D;
+display D.slack;
+display D.down, D.current, D.up;
+
+
+solve;
